@@ -23,6 +23,10 @@ export function ProductCard({ product, openProductDetails }: ProductCardProps) {
           src={product.image}
           alt={product.name}
           className="w-full h-full object-cover object-center transition-all duration-500 group-hover:scale-110 group-hover:rotate-1"
+          onError={(e) => {
+            // Fallback to a placeholder if image fails to load
+            (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158";
+          }}
         />
         
         {/* Animated glow effect on hover */}
