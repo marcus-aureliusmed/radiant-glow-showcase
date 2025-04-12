@@ -19,7 +19,7 @@ export const products: Product[] = [
     ],
     popularity: 93,
     isNewArrival: false,
-    image: "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
+    image: "https://images.unsplash.com/photo-1556228578-28600f2ef945"
   },
   {
     id: 2,
@@ -37,7 +37,7 @@ export const products: Product[] = [
     ],
     popularity: 87,
     isNewArrival: false,
-    image: "https://images.unsplash.com/photo-1556228720-195a672e8a03?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
+    image: "https://images.unsplash.com/photo-1620916566398-39f1143ab7be"
   },
   {
     id: 3,
@@ -55,7 +55,7 @@ export const products: Product[] = [
     ],
     popularity: 78,
     isNewArrival: true,
-    image: "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
+    image: "https://images.unsplash.com/photo-1611930021389-f6c8aebfb107"
   },
   {
     id: 4,
@@ -73,7 +73,7 @@ export const products: Product[] = [
     ],
     popularity: 92,
     isNewArrival: false,
-    image: "https://images.unsplash.com/photo-1631730486572-5698cacc829c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
+    image: "https://images.unsplash.com/photo-1631730486572-5698cacc829c"
   },
   {
     id: 5,
@@ -91,7 +91,7 @@ export const products: Product[] = [
     ],
     popularity: 89,
     isNewArrival: true,
-    image: "https://images.unsplash.com/photo-1556228578-28600f2ef945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
+    image: "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b"
   },
   {
     id: 6,
@@ -109,7 +109,7 @@ export const products: Product[] = [
     ],
     popularity: 75,
     isNewArrival: false,
-    image: "https://images.unsplash.com/photo-1592136957897-b2b6ca21e10d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
+    image: "https://images.unsplash.com/photo-1573461160327-b450ce3d8e7f"
   },
   {
     id: 7,
@@ -127,7 +127,7 @@ export const products: Product[] = [
     ],
     popularity: 85,
     isNewArrival: true,
-    image: "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
+    image: "https://images.unsplash.com/photo-1592136957897-b2b6ca21e10d"
   },
   {
     id: 8,
@@ -145,7 +145,7 @@ export const products: Product[] = [
     ],
     popularity: 82,
     isNewArrival: false,
-    image: "https://images.unsplash.com/photo-1635360938476-4fed2112d9cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
+    image: "https://images.unsplash.com/photo-1635360938476-4fed2112d9cd"
   },
   {
     id: 9,
@@ -163,7 +163,7 @@ export const products: Product[] = [
     ],
     popularity: 88,
     isNewArrival: true,
-    image: "https://images.unsplash.com/photo-1631730486920-c7fb632b4221?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
+    image: "https://images.unsplash.com/photo-1556228720-195a672e8a03"
   },
   {
     id: 10,
@@ -181,7 +181,7 @@ export const products: Product[] = [
     ],
     popularity: 79,
     isNewArrival: false,
-    image: "https://images.unsplash.com/photo-1573461160327-b450ce3d8e7f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
+    image: "https://images.unsplash.com/photo-1631730486920-c7fb632b4221"
   },
   {
     id: 11,
@@ -199,7 +199,7 @@ export const products: Product[] = [
     ],
     popularity: 84,
     isNewArrival: false,
-    image: "https://images.unsplash.com/photo-1611930021389-f6c8aebfb107?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
+    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158"
   },
   {
     id: 12,
@@ -217,7 +217,7 @@ export const products: Product[] = [
     ],
     popularity: 77,
     isNewArrival: false,
-    image: "https://images.unsplash.com/photo-1620755912518-ebe3fba75a7f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
+    image: "https://images.unsplash.com/photo-1620755912518-ebe3fba75a7f"
   }
 ];
 
@@ -228,4 +228,3 @@ export const allIngredients: Ingredient[] = ['Tea Tree', 'Charcoal', 'Vitamin C'
 
 // Price range
 export const priceRange: [number, number] = [299, 699];
-

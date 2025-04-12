@@ -28,6 +28,9 @@ export function ProductModal({ product, isOpen, onClose }: ProductModalProps) {
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-[700px] max-h-[90vh] overflow-y-auto p-0 bg-gradient-to-br from-background to-muted/30">
+        <DialogTitle className="sr-only">{product.name} Details</DialogTitle>
+        <DialogDescription className="sr-only">Details about {product.name} product</DialogDescription>
+        
         <DialogClose className="absolute right-4 top-4 z-10 rounded-full p-1.5 bg-background/80 backdrop-blur-sm hover:bg-pink-100 dark:hover:bg-pink-900/40 transition-colors duration-300">
           <X size={18} />
         </DialogClose>
