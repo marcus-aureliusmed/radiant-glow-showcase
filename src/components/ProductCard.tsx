@@ -94,7 +94,7 @@ function getSkinTypeDescription(type: string): string {
     case 'Sensitive':
       return 'Fragrance-free, gentle formula with soothing ingredients for easily irritated skin.';
     case 'Normal':
-      return 'Maintains your skin's natural balance while providing a thorough cleanse.';
+      return "Maintains your skin's natural balance while providing a thorough cleanse.";
     default:
       return 'Suitable for this skin type.';
   }
