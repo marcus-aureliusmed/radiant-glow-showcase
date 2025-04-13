@@ -1,6 +1,7 @@
 
 import { Search, ShoppingBag } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
+import { FaceAnalyzerButton } from "./FaceAnalyzer/FaceAnalyzerButton";
 
 interface HeaderProps {
   searchQuery: string;
@@ -32,10 +33,13 @@ export function Header({ searchQuery, setSearchQuery }: HeaderProps) {
         </div>
         
         <div className="flex items-center gap-4">
-          <ThemeToggle />
-          <button className="relative p-2">
-            <ShoppingBag size={20} />
-            <span className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-pink-500 text-white text-xs flex items-center justify-center">
+          <FaceAnalyzerButton />
+          <button className="relative p-2 group">
+            <ShoppingBag 
+              size={20} 
+              className="transition-transform duration-300 group-hover:scale-110 group-hover:text-pink-500"
+            />
+            <span className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-pink-500 text-white text-xs flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
               0
             </span>
           </button>

@@ -16,6 +16,7 @@ export interface Product {
   popularity: number;
   isNewArrival: boolean;
   image: string;
+  weightOptions?: WeightOption[];
 }
 
 export interface FilterState {

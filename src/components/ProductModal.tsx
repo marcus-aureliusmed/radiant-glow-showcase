@@ -1,20 +1,18 @@
 
-import { Product } from "@/types/product";
+import { Product, WeightOption } from "@/types/product";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogClose } from "@/components/ui/dialog";
 import { Droplet, Leaf, Sparkles, X, ShoppingCart, Check } from "lucide-react";
 import { useState, useEffect } from "react";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { Checkbox } from "@/components/ui/checkbox";
 import { toast } from "sonner";
+import { LaunchProductButton } from "./LaunchProduct/LaunchProductButton";
 
 interface ProductModalProps {
   product: Product | null;
   isOpen: boolean;
   onClose: () => void;
 }
-
-type WeightOption = "50g" | "75g" | "125g";
 
 export function ProductModal({ product, isOpen, onClose }: ProductModalProps) {
   const [animateIn, setAnimateIn] = useState(false);
@@ -184,6 +182,11 @@ export function ProductModal({ product, isOpen, onClose }: ProductModalProps) {
                 <ShoppingCart size={18} />
                 Add to Cart ({selectedWeight})
               </button>
+
+              {/* Launch Your Own Facewash Button */}
+              <div className={`transform transition-all duration-500 delay-700 ${animateIn ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
+                <LaunchProductButton />
+              </div>
             </div>
           </div>
         </div>

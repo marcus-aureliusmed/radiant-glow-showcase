@@ -16,6 +16,18 @@ export function ProductCard({ product, openProductDetails }: ProductCardProps) {
 
   const handleCardClick = () => {
     setIsClicked(true);
+    
+    // Create click ripple effect (added via CSS)
+    const ripple = document.createElement('div');
+    ripple.classList.add('ripple-effect');
+    const card = document.getElementById(`product-card-${product.id}`);
+    if (card) {
+      card.appendChild(ripple);
+      setTimeout(() => {
+        card.removeChild(ripple);
+      }, 1000);
+    }
+    
     setTimeout(() => {
       setIsClicked(false);
       openProductDetails(product);
@@ -24,6 +36,14 @@ export function ProductCard({ product, openProductDetails }: ProductCardProps) {
 
   const handleAddToCart = (e: React.MouseEvent) => {
     e.stopPropagation();
+    
+    // Create button click effect
+    const button = e.currentTarget as HTMLButtonElement;
+    button.classList.add('clicked');
+    setTimeout(() => {
+      button.classList.remove('clicked');
+    }, 300);
+    
     // In a real app, this would add to cart functionality
     toast.success(`Added ${product.name} to cart`, {
       description: "Your item has been added to the cart",
@@ -34,6 +54,7 @@ export function ProductCard({ product, openProductDetails }: ProductCardProps) {
 
   return (
     <div 
+      id={`product-card-${product.id}`}
       className={`product-card group overflow-hidden relative cursor-pointer transform transition-all duration-300 ${isClicked ? 'scale-95 shadow-sm' : ''}`}
       onClick={handleCardClick}
     >
@@ -92,10 +113,10 @@ export function ProductCard({ product, openProductDetails }: ProductCardProps) {
         </div>
         
         <div className="flex justify-between items-center pt-1">
-          <p className="font-semibold text-lg dark:text-white">₹{product.price}</p>
+          <p className="font-semibold text-lg text-foreground">₹{product.price}</p>
           <button 
             onClick={handleAddToCart}
-            className="text-xs px-3 py-1.5 rounded-full bg-primary text-primary-foreground hover:opacity-90 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 flex items-center gap-1"
+            className="text-xs px-3 py-1.5 rounded-full bg-primary text-primary-foreground hover:opacity-90 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 flex items-center gap-1 add-to-cart-btn"
           >
             <ShoppingCart size={12} />
             Add to Cart

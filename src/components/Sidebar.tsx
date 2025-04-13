@@ -1,9 +1,10 @@
-
 import { useState } from "react";
 import { SkinType, Brand, Ingredient, FilterState } from "@/types/product";
 import { allSkinTypes, allBrands, allIngredients, priceRange } from "@/data/products";
 import { Check, ChevronDown, ChevronUp, Filter, X } from "lucide-react";
 import { Slider } from "@/components/ui/slider";
+import { CustomFacewashLink } from "./CustomFacewash/CustomFacewashLink";
+import { UploadPrescription } from "./Prescription/UploadPrescription";
 
 interface SidebarProps {
   filters: FilterState;
@@ -243,6 +244,16 @@ export function Sidebar({
           </div>
         )}
       </div>
+
+      {/* Custom Facewash Link */}
+      <div className="border-t border-border/50 pt-4">
+        <CustomFacewashLink />
+      </div>
+
+      {/* Upload Prescription */}
+      <div className="pt-4">
+        <UploadPrescription />
+      </div>
     </div>
   );
 
@@ -258,7 +269,7 @@ export function Sidebar({
         <>
           <button
             onClick={() => setIsOpen(true)}
-            className="fixed bottom-4 left-4 z-50 p-3 rounded-full bg-primary text-primary-foreground shadow-lg"
+            className="fixed bottom-4 left-4 z-50 p-3 rounded-full bg-primary text-primary-foreground shadow-lg transform transition-transform duration-300 hover:scale-110 active:scale-95"
             aria-label="Open filters"
           >
             <Filter size={20} />
