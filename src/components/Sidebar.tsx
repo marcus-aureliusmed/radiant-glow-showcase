@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { SkinType, Brand, Ingredient, FilterState } from "@/types/product";
 import { allSkinTypes, allBrands, allIngredients, priceRange } from "@/data/products";
@@ -109,10 +110,6 @@ export function Sidebar({
             <X size={18} />
           </button>
         )}
-      </div>
-      
-      <div className="pt-2">
-        <UploadPrescription setFilters={setFilters} />
       </div>
       
       {hasActiveFilters() && (
@@ -252,6 +249,11 @@ export function Sidebar({
       {/* Custom Facewash Link */}
       <div className="border-t border-border/50 pt-4">
         <CustomFacewashLink />
+      </div>
+      
+      {/* Prescription Upload - moved below customization */}
+      <div className="pt-4">
+        <UploadPrescription setFilters={setFilters} />
       </div>
     </div>
   );

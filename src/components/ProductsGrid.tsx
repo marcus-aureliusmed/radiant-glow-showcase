@@ -1,8 +1,7 @@
 
-import { Product, SortOption } from "@/types/product";
-import { ProductCard } from "./ProductCard";
+import { Product } from "@/types/product";
 import { useEffect, useState } from "react";
-import { Heart } from "lucide-react";
+import { Heart, Star } from "lucide-react";
 import { CustomFacewashLink } from "./CustomFacewash/CustomFacewashLink";
 
 interface ProductsGridProps {
@@ -64,7 +63,7 @@ export function ProductsGrid({ products, openProductDetails }: ProductsGridProps
                 {product.isNewArrival && (
                   <div className="absolute top-2 left-2 z-10 bg-white text-pink-500 rounded-full px-2 py-1 text-xs font-medium shadow-md flex items-center">
                     <span className="text-pink-500 mr-1">★</span>
-                    <span>Top Rated</span>
+                    <span>Superhost</span>
                   </div>
                 )}
                 
@@ -92,12 +91,12 @@ export function ProductsGrid({ products, openProductDetails }: ProductsGridProps
                   />
                 </div>
                 
-                {/* Product info */}
+                {/* Product info - styled more like Airbnb */}
                 <div className="p-4 space-y-1">
                   <div className="flex justify-between">
                     <h3 className="font-medium">{product.name}</h3>
                     <div className="flex items-center">
-                      <span className="text-pink-500 mr-1">★</span>
+                      <Star size={16} className="fill-pink-500 text-pink-500 mr-1" />
                       <span>{(4.5 + Math.random() * 0.5).toFixed(1)}</span>
                       <span className="text-gray-400 ml-1">({Math.floor(Math.random() * 200) + 50})</span>
                     </div>
@@ -105,24 +104,18 @@ export function ProductsGrid({ products, openProductDetails }: ProductsGridProps
                   
                   <p className="text-sm text-muted-foreground">{product.brand}</p>
                   
-                  <div className="flex flex-wrap gap-1 my-1">
-                    {product.skinType.slice(0, 2).map((type) => (
-                      <span
-                        key={type}
-                        className="text-xs py-0.5 px-1.5 bg-radiant-lavender/50 text-purple-900 dark:text-purple-100 rounded"
-                      >
-                        {type}
-                      </span>
-                    ))}
-                    
-                    {product.skinType.length > 2 && (
-                      <span className="text-xs py-0.5 px-1.5 bg-muted rounded animate-pulse-soft">
-                        +{product.skinType.length - 2}
-                      </span>
-                    )}
-                  </div>
+                  {/* Location-like data */}
+                  <p className="text-sm text-muted-foreground">
+                    For {product.skinType.join(", ")} skin
+                  </p>
                   
-                  <p className="font-semibold text-lg">₹{product.price}</p>
+                  {/* Date range like display */}
+                  <p className="text-sm text-muted-foreground">
+                    Ships in {Math.floor(Math.random() * 5) + 1}-{Math.floor(Math.random() * 5) + 5} days
+                  </p>
+                  
+                  {/* Price display */}
+                  <p className="font-semibold text-lg mt-2">₹{product.price} <span className="text-sm font-normal text-muted-foreground">per unit</span></p>
                 </div>
               </div>
             </div>

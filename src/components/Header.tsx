@@ -1,7 +1,6 @@
 
-import { Search, ShoppingBag, User, LogIn, UserPlus, HelpCircle, ChevronDown } from "lucide-react";
+import { Search, ShoppingBag, User, LogIn, UserPlus, HelpCircle, ChevronDown, Beaker } from "lucide-react";
 import { useState } from "react";
-import { ThemeToggle } from "./ThemeToggle";
 import { FaceAnalyzerButton } from "./FaceAnalyzer/FaceAnalyzerButton";
 import { Link } from "react-router-dom";
 
@@ -17,10 +16,10 @@ export function Header({ searchQuery, setSearchQuery }: HeaderProps) {
     <header className="sticky top-0 z-50 w-full backdrop-blur-md bg-background/80 border-b border-border/50">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <h1 className="text-2xl font-semibold">
+          <Link to="/" className="text-2xl font-semibold">
             <span className="text-pink-500">Radiant</span>
             <span className="text-purple-500">Glow</span>
-          </h1>
+          </Link>
         </div>
         
         <div className="relative max-w-md w-full mx-4 hidden md:block">
@@ -58,7 +57,8 @@ export function Header({ searchQuery, setSearchQuery }: HeaderProps) {
                   <span>Log In</span>
                 </Link>
                 <Link to="/customize-facewash" className="flex items-center gap-2 px-4 py-2 text-sm hover:bg-muted transition-colors">
-                  <span>Launch Your Facewash</span>
+                  <Beaker size={16} />
+                  <span>Customize Facewash</span>
                 </Link>
                 <Link to="/help" className="flex items-center gap-2 px-4 py-2 text-sm hover:bg-muted transition-colors">
                   <HelpCircle size={16} />
@@ -68,7 +68,10 @@ export function Header({ searchQuery, setSearchQuery }: HeaderProps) {
             )}
           </div>
           
+          {/* Face Analyzer Button */}
           <FaceAnalyzerButton />
+          
+          {/* Shopping Cart */}
           <button className="relative p-2 group">
             <ShoppingBag 
               size={20} 
