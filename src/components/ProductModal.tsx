@@ -6,7 +6,6 @@ import { Droplet, Leaf, Sparkles, X, ShoppingCart, Check } from "lucide-react";
 import { useState, useEffect } from "react";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { toast } from "sonner";
-import { LaunchProductButton } from "./LaunchProduct/LaunchProductButton";
 
 interface ProductModalProps {
   product: Product | null;
@@ -182,11 +181,6 @@ export function ProductModal({ product, isOpen, onClose }: ProductModalProps) {
                 <ShoppingCart size={18} />
                 Add to Cart ({selectedWeight})
               </button>
-
-              {/* Launch Your Own Facewash Button */}
-              <div className={`transform transition-all duration-500 delay-700 ${animateIn ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
-                <LaunchProductButton />
-              </div>
             </div>
           </div>
         </div>

@@ -2,10 +2,12 @@
 import { useState } from "react";
 import { Cloud, Upload, Check } from "lucide-react";
 import { toast } from "sonner";
+import { Link } from "react-router-dom";
 
 export function UploadPrescription() {
   const [isUploading, setIsUploading] = useState(false);
   const [isUploaded, setIsUploaded] = useState(false);
+  const [showSuggestion, setShowSuggestion] = useState(false);
   
   const handleUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -36,6 +38,11 @@ export function UploadPrescription() {
       toast.success("Prescription uploaded successfully", {
         description: "We'll take your recommendation into account"
       });
+      
+      // Show personalized suggestion after a delay
+      setTimeout(() => {
+        setShowSuggestion(true);
+      }, 1000);
     }, 1500);
   };
   
@@ -88,6 +95,33 @@ export function UploadPrescription() {
           </>
         )}
       </label>
+      
+      {/* Personalized Suggestion */}
+      {showSuggestion && (
+        <div className="mt-4 p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800 animate-fade-in">
+          <h4 className="text-sm font-medium text-blue-800 dark:text-blue-300 mb-2">Personalized Recommendation</h4>
+          <p className="text-xs text-blue-700 dark:text-blue-400 mb-2">
+            Based on your prescription, we recommend:
+          </p>
+          <div className="flex items-center gap-3 p-2 bg-white dark:bg-slate-800 rounded-lg">
+            <img 
+              src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158" 
+              alt="Recommended product" 
+              className="w-12 h-12 rounded object-cover"
+            />
+            <div>
+              <p className="text-sm font-medium">Gentle Soothing Facewash</p>
+              <p className="text-xs text-muted-foreground">Perfect for your sensitive skin</p>
+            </div>
+          </div>
+          <Link 
+            to="/"
+            className="block w-full text-center mt-3 text-xs py-2 px-4 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+          >
+            View Details
+          </Link>
+        </div>
+      )}
     </div>
   );
 }

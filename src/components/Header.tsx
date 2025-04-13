@@ -2,6 +2,7 @@
 import { Search, ShoppingBag } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
 import { FaceAnalyzerButton } from "./FaceAnalyzer/FaceAnalyzerButton";
+import { LaunchProductHeaderButton } from "./LaunchProduct/LaunchProductHeaderButton";
 
 interface HeaderProps {
   searchQuery: string;
@@ -34,6 +35,7 @@ export function Header({ searchQuery, setSearchQuery }: HeaderProps) {
         
         <div className="flex items-center gap-4">
           <FaceAnalyzerButton />
+          <LaunchProductHeaderButton />
           <button className="relative p-2 group">
             <ShoppingBag 
               size={20} 
