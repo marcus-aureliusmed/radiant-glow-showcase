@@ -1,8 +1,10 @@
 
 import { Product } from "@/types/product";
 import { Badge } from "@/components/ui/badge";
-import { Sparkles } from "lucide-react";
+import { Sparkles, ShoppingCart } from "lucide-react";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
+import { useState } from "react";
+import { toast } from "sonner";
 
 interface ProductCardProps {
   product: Product;
@@ -10,10 +12,30 @@ interface ProductCardProps {
 }
 
 export function ProductCard({ product, openProductDetails }: ProductCardProps) {
+  const [isClicked, setIsClicked] = useState(false);
+
+  const handleCardClick = () => {
+    setIsClicked(true);
+    setTimeout(() => {
+      setIsClicked(false);
+      openProductDetails(product);
+    }, 300);
+  };
+
+  const handleAddToCart = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    // In a real app, this would add to cart functionality
+    toast.success(`Added ${product.name} to cart`, {
+      description: "Your item has been added to the cart",
+      position: "top-center",
+      duration: 3000,
+    });
+  };
+
   return (
     <div 
-      className="product-card group overflow-hidden relative cursor-pointer"
-      onClick={() => openProductDetails(product)}
+      className={`product-card group overflow-hidden relative cursor-pointer transform transition-all duration-300 ${isClicked ? 'scale-95 shadow-sm' : ''}`}
+      onClick={handleCardClick}
     >
       {/* Shimmer effect overlay */}
       <div className="absolute inset-0 z-0 shimmer-effect opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
@@ -34,7 +56,7 @@ export function ProductCard({ product, openProductDetails }: ProductCardProps) {
         
         {product.isNewArrival && (
           <div className="absolute top-2 right-2 animate-pulse-soft">
-            <Badge className="bg-radiant-pink text-pink-900 flex items-center gap-1">
+            <Badge className="bg-radiant-pink text-pink-900 dark:text-pink-100 flex items-center gap-1">
               <Sparkles size={12} className="animate-pulse" />
               <span>New</span>
             </Badge>
@@ -70,15 +92,12 @@ export function ProductCard({ product, openProductDetails }: ProductCardProps) {
         </div>
         
         <div className="flex justify-between items-center pt-1">
-          <p className="font-semibold text-lg">₹{product.price}</p>
+          <p className="font-semibold text-lg dark:text-white">₹{product.price}</p>
           <button 
-            onClick={(e) => {
-              e.stopPropagation();
-              // This would be your add to cart logic
-              console.log("Added to cart:", product.name);
-            }}
-            className="text-xs px-3 py-1.5 rounded-full bg-primary text-primary-foreground hover:opacity-90 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5"
+            onClick={handleAddToCart}
+            className="text-xs px-3 py-1.5 rounded-full bg-primary text-primary-foreground hover:opacity-90 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 flex items-center gap-1"
           >
+            <ShoppingCart size={12} />
             Add to Cart
           </button>
         </div>

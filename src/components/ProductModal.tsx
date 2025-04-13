@@ -2,8 +2,11 @@
 import { Product } from "@/types/product";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogClose } from "@/components/ui/dialog";
-import { Droplet, Leaf, Sparkles, X } from "lucide-react";
+import { Droplet, Leaf, Sparkles, X, ShoppingCart, Check } from "lucide-react";
 import { useState, useEffect } from "react";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Checkbox } from "@/components/ui/checkbox";
+import { toast } from "sonner";
 
 interface ProductModalProps {
   product: Product | null;
@@ -11,8 +14,11 @@ interface ProductModalProps {
   onClose: () => void;
 }
 
+type WeightOption = "50g" | "75g" | "125g";
+
 export function ProductModal({ product, isOpen, onClose }: ProductModalProps) {
   const [animateIn, setAnimateIn] = useState(false);
+  const [selectedWeight, setSelectedWeight] = useState<WeightOption>("50g");
 
   useEffect(() => {
     if (isOpen) {
@@ -23,11 +29,22 @@ export function ProductModal({ product, isOpen, onClose }: ProductModalProps) {
     }
   }, [isOpen]);
 
+  const handleAddToCart = () => {
+    if (product) {
+      // In a real app, this would add to cart functionality
+      toast.success(`Added ${product.name} (${selectedWeight}) to cart`, {
+        description: "Your item has been added to the cart",
+        position: "top-center",
+        duration: 3000,
+      });
+    }
+  };
+
   if (!product) return null;
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-[700px] max-h-[90vh] overflow-y-auto p-0 bg-gradient-to-br from-background to-muted/30">
+      <DialogContent className="sm:max-w-[700px] max-h-[90vh] overflow-y-auto p-0 bg-gradient-to-br from-background to-muted/30 transition-all duration-500 ease-in-out">
         <DialogTitle className="sr-only">{product.name} Details</DialogTitle>
         <DialogDescription className="sr-only">Details about {product.name} product</DialogDescription>
         
@@ -63,6 +80,29 @@ export function ProductModal({ product, isOpen, onClose }: ProductModalProps) {
               
               {/* Pulsing glow effect */}
               <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-transparent to-pink-500/20 animate-pulse-soft"></div>
+              
+              {/* Weight Selection */}
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                <h3 className="text-white font-medium mb-2 text-sm">Select Weight:</h3>
+                <RadioGroup 
+                  value={selectedWeight} 
+                  onValueChange={(value) => setSelectedWeight(value as WeightOption)}
+                  className="flex items-center gap-4"
+                >
+                  <div className="flex items-center space-x-2">
+                    <RadioGroupItem value="50g" id="r1" className="border-white text-white" />
+                    <label htmlFor="r1" className="text-white text-sm cursor-pointer">50g</label>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <RadioGroupItem value="75g" id="r2" className="border-white text-white" />
+                    <label htmlFor="r2" className="text-white text-sm cursor-pointer">75g</label>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <RadioGroupItem value="125g" id="r3" className="border-white text-white" />
+                    <label htmlFor="r3" className="text-white text-sm cursor-pointer">125g</label>
+                  </div>
+                </RadioGroup>
+              </div>
             </div>
           </div>
           
@@ -75,14 +115,14 @@ export function ProductModal({ product, isOpen, onClose }: ProductModalProps) {
                     <p className="text-muted-foreground">{product.brand}</p>
                   </div>
                   {product.isNewArrival && (
-                    <Badge className="bg-radiant-pink text-pink-900 flex items-center gap-1">
+                    <Badge className="bg-radiant-pink text-pink-900 dark:text-pink-100 flex items-center gap-1">
                       <Sparkles size={12} className="animate-pulse" />
                       <span>New</span>
                     </Badge>
                   )}
                 </div>
                 
-                <p className="text-2xl font-bold mt-2 text-gradient">₹{product.price}</p>
+                <p className="text-2xl font-bold mt-2 text-gradient dark:text-white">₹{product.price}</p>
               </div>
               
               <div className={`transform transition-all duration-500 delay-200 ${animateIn ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
@@ -136,8 +176,13 @@ export function ProductModal({ product, isOpen, onClose }: ProductModalProps) {
                 </div>
               </div>
               
-              <button className={`w-full py-3 rounded-full bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white font-medium transition-all duration-300 hover:shadow-lg hover:-translate-y-1 ${animateIn ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`} style={{ transitionDelay: '600ms' }}>
-                Add to Cart
+              <button 
+                onClick={handleAddToCart}
+                className={`w-full py-3 rounded-full bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white font-medium transition-all duration-300 hover:shadow-lg hover:-translate-y-1 flex items-center justify-center gap-2 ${animateIn ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`} 
+                style={{ transitionDelay: '600ms' }}
+              >
+                <ShoppingCart size={18} />
+                Add to Cart ({selectedWeight})
               </button>
             </div>
           </div>

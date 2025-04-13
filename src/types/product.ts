@@ -2,6 +2,7 @@
 export type SkinType = 'Oily' | 'Dry' | 'Combination' | 'Sensitive' | 'Normal';
 export type Brand = 'GlowUp' | 'NatureFresh' | 'DermaPure' | 'CleanSkin' | 'AquaBloom';
 export type Ingredient = 'Tea Tree' | 'Charcoal' | 'Vitamin C' | 'Aloe Vera' | 'Hyaluronic Acid';
+export type WeightOption = '50g' | '75g' | '125g';
 
 export interface Product {
   id: number;
