@@ -70,12 +70,12 @@ export function ProductsGrid({ products, openProductDetails }: ProductsGridProps
                 
                 {/* Favorite button */}
                 <button 
-                  onClick={(e) => toggleFavorite(e, product.id)} 
+                  onClick={(e) => toggleFavorite(e, product.id.toString())} 
                   className="absolute top-2 right-2 z-10 p-2 rounded-full bg-white/80 hover:bg-white shadow-md transition-all duration-300"
                 >
                   <Heart 
                     size={18} 
-                    className={favorites.includes(product.id) ? "fill-pink-500 text-pink-500" : "text-gray-500"}
+                    className={favorites.includes(product.id.toString()) ? "fill-pink-500 text-pink-500" : "text-gray-500"}
                   />
                 </button>
                 
