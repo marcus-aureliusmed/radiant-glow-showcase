@@ -111,6 +111,10 @@ export function Sidebar({
         )}
       </div>
       
+      <div className="pt-2">
+        <UploadPrescription setFilters={setFilters} />
+      </div>
+      
       {hasActiveFilters() && (
         <button
           onClick={resetFilters}
@@ -248,11 +252,6 @@ export function Sidebar({
       {/* Custom Facewash Link */}
       <div className="border-t border-border/50 pt-4">
         <CustomFacewashLink />
-      </div>
-
-      {/* Upload Prescription */}
-      <div className="pt-4">
-        <UploadPrescription />
       </div>
     </div>
   );
