@@ -1,10 +1,10 @@
-
-import { useState } from "react";
+import React, { useState } from "react";
 import { SkinType, Brand, Ingredient, FilterState } from "@/types/product";
 import { allSkinTypes, allBrands, allIngredients, priceRange } from "@/data/products";
 import { Check, ChevronDown, ChevronUp, Filter, X } from "lucide-react";
 import { Slider } from "@/components/ui/slider";
 import { CustomFacewashLink } from "./CustomFacewash/CustomFacewashLink";
+import { LaunchFacewashLink } from "./LaunchFacewash/LaunchFacewashLink";
 import { UploadPrescription } from "./Prescription/UploadPrescription";
 
 interface SidebarProps {
@@ -251,7 +251,12 @@ export function Sidebar({
         <CustomFacewashLink />
       </div>
       
-      {/* Prescription Upload - moved below customization */}
+      {/* Launch Facewash Link */}
+      <div className="pt-2">
+        <LaunchFacewashLink />
+      </div>
+      
+      {/* Prescription Upload */}
       <div className="pt-4">
         <UploadPrescription setFilters={setFilters} />
       </div>
