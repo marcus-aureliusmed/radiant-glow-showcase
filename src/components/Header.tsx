@@ -1,5 +1,5 @@
 
-import { Search, ShoppingBag, User, LogIn, UserPlus, HelpCircle, ChevronDown, Beaker } from "lucide-react";
+import { Search, ShoppingBag, User, LogIn, UserPlus, HelpCircle, ChevronDown, Beaker, Camera } from "lucide-react";
 import { useState } from "react";
 import { FaceAnalyzerButton } from "./FaceAnalyzer/FaceAnalyzerButton";
 import { Link } from "react-router-dom";
@@ -36,6 +36,23 @@ export function Header({ searchQuery, setSearchQuery }: HeaderProps) {
         </div>
         
         <div className="flex items-center gap-4">
+          {/* Face Analyzer Button with "Ask AI" label */}
+          <div className="flex flex-col items-center">
+            <FaceAnalyzerButton />
+            <span className="text-xs text-muted-foreground mt-1">Ask AI</span>
+          </div>
+          
+          {/* Shopping Cart */}
+          <button className="relative p-2 group">
+            <ShoppingBag 
+              size={20} 
+              className="transition-transform duration-300 group-hover:scale-110 group-hover:text-pink-500"
+            />
+            <span className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-pink-500 text-white text-xs flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+              0
+            </span>
+          </button>
+          
           {/* Profile Dropdown */}
           <div className="relative">
             <button 
@@ -67,20 +84,6 @@ export function Header({ searchQuery, setSearchQuery }: HeaderProps) {
               </div>
             )}
           </div>
-          
-          {/* Face Analyzer Button */}
-          <FaceAnalyzerButton />
-          
-          {/* Shopping Cart */}
-          <button className="relative p-2 group">
-            <ShoppingBag 
-              size={20} 
-              className="transition-transform duration-300 group-hover:scale-110 group-hover:text-pink-500"
-            />
-            <span className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-pink-500 text-white text-xs flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
-              0
-            </span>
-          </button>
         </div>
       </div>
       

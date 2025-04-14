@@ -9,7 +9,6 @@ import { Sidebar } from "@/components/Sidebar";
 import { ProductsGrid } from "@/components/ProductsGrid";
 import { SortBar } from "@/components/SortBar";
 import { ProductModal } from "@/components/ProductModal";
-import { FAQSection } from "@/components/FAQ/FAQSection";
 import { Footer } from "@/components/Footer";
 
 const Index = () => {
@@ -161,7 +160,6 @@ const Index = () => {
         </div>
       </main>
       
-      <FAQSection />
       <Footer />
       
       <ProductModal 
