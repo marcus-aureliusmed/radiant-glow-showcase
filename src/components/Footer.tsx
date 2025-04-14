@@ -1,7 +1,7 @@
 
 import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
-import { ArrowUp, Mail, Phone, MessageSquare } from "lucide-react";
+import { ArrowUp, Mail, Phone, MessageSquare, Rocket } from "lucide-react";
 
 export function Footer() {
   const scrollToTop = () => {
@@ -47,8 +47,10 @@ export function Footer() {
               <Link to="/" className="text-muted-foreground hover:text-primary transition-colors">Home</Link>
               <Link to="/customize-facewash" className="text-muted-foreground hover:text-primary transition-colors">Customize Facewash</Link>
               <Link to="/help" className="text-muted-foreground hover:text-primary transition-colors">Help Center</Link>
-              <Link to="/login" className="text-muted-foreground hover:text-primary transition-colors">Sign In</Link>
-              <Link to="/signup" className="text-muted-foreground hover:text-primary transition-colors">Sign Up</Link>
+              <Link to="/launch-facewash" className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2">
+                <Rocket size={16} />
+                Launch Your Facewash
+              </Link>
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Terms & Conditions</a>
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Privacy Policy</a>
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Shipping Policy</a>

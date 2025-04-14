@@ -37,13 +37,13 @@ export function Header({ searchQuery, setSearchQuery }: HeaderProps) {
         
         <div className="flex items-center gap-4">
           {/* Face Analyzer Button with "Ask AI" label */}
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center justify-center">
             <FaceAnalyzerButton />
             <span className="text-xs text-muted-foreground mt-1">Ask AI</span>
           </div>
           
           {/* Shopping Cart */}
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center justify-center">
             <button className="relative p-2 group">
               <ShoppingBag 
                 size={20} 
