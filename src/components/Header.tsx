@@ -81,7 +81,7 @@ export function Header({ searchQuery, setSearchQuery }: HeaderProps) {
                 </Link>
                 <Link to="/launch-facewash" className="flex items-center gap-2 px-4 py-2 text-sm hover:bg-muted transition-colors">
                   <Rocket size={16} />
-                  <span>Launch Your Facewash</span>
+                  <span>Launch Facewash</span>
                 </Link>
                 <Link to="/help" className="flex items-center gap-2 px-4 py-2 text-sm hover:bg-muted transition-colors">
                   <HelpCircle size={16} />
