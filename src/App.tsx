@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import CustomFacewash from "./pages/CustomFacewash";
+import LaunchFacewash from "./pages/LaunchFacewash";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Help from "./pages/Help";
@@ -22,6 +23,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/customize-facewash" element={<CustomFacewash />} />
+          <Route path="/launch-facewash" element={<LaunchFacewash />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/help" element={<Help />} />

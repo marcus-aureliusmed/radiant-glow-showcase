@@ -1,9 +1,6 @@
-
 import { useState } from "react";
 import { Cloud, Upload, Check } from "lucide-react";
 import { toast } from "sonner";
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
 
 interface UploadPrescriptionProps {
   setFilters: (filters: any) => void;
@@ -90,13 +87,6 @@ export function UploadPrescription({ setFilters }: UploadPrescriptionProps) {
             <Check size={24} className="text-green-500" />
             <span className="text-sm text-green-700 dark:text-green-300 font-medium">Prescription Analyzed</span>
             <span className="text-xs text-muted-foreground">Products filtered based on your needs</span>
-            <div className="mt-2 w-full">
-              <Link to="/customize-facewash">
-                <Button variant="outline" className="w-full text-xs mt-1">
-                  Create Personalized Facewash
-                </Button>
-              </Link>
-            </div>
           </>
         ) : isUploading ? (
           <>
