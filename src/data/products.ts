@@ -1,7 +1,5 @@
-
 import { Product, SkinType, Brand, Ingredient } from '@/types/product';
 
-// Mock data for face wash products
 export const products: Product[] = [
   {
     id: 1,
@@ -91,7 +89,7 @@ export const products: Product[] = [
     ],
     popularity: 89,
     isNewArrival: true,
-    image: "https://images.pexels.com/photos/17466121/pexels-photo-17466121/free-photo-of-transformative-makeup-for-the-bold-and-beautiful.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    image: "https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
   },
   {
     id: 6,
@@ -163,7 +161,7 @@ export const products: Product[] = [
     ],
     popularity: 88,
     isNewArrival: true,
-    image: "https://images.unsplash.com/photo-1731577178044-93840a6d14b5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fGZhY2V3YXNofGVufDB8fDB8fHww"
+    image: "https://images.unsplash.com/photo-1598462795010-8ffd5f41d1aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
   },
   {
     id: 10,
@@ -199,7 +197,7 @@ export const products: Product[] = [
     ],
     popularity: 84,
     isNewArrival: false,
-    image: "https://images.unsplash.com/photo-1739131285874-8d545cffef95?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzB8fGZhY2V3YXNofGVufDB8fDB8fHww"
+    image: "https://images.unsplash.com/photo-1612532275214-e4ca76d0e4d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
   },
   {
     id: 12,
@@ -221,10 +219,8 @@ export const products: Product[] = [
   }
 ];
 
-// Export constants for filters
 export const allSkinTypes: SkinType[] = ['Oily', 'Dry', 'Combination', 'Sensitive', 'Normal'];
 export const allBrands: Brand[] = ['GlowUp', 'NatureFresh', 'DermaPure', 'CleanSkin', 'AquaBloom'];
 export const allIngredients: Ingredient[] = ['Tea Tree', 'Charcoal', 'Vitamin C', 'Aloe Vera', 'Hyaluronic Acid'];
 
-// Price range
 export const priceRange: [number, number] = [299, 699];
