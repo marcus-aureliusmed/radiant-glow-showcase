@@ -97,6 +97,7 @@ export function ProductsGrid({ products, openProductDetails }: ProductsGridProps
                     onError={(e) => {
                       // Fallback to a placeholder if image fails to load
                       (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158";
+                      console.log(`Image failed to load for ${product.name}. Using fallback.`);
                     }}
                   />
                 </div>
