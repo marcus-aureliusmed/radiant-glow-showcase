@@ -11,6 +11,7 @@ import LaunchFacewash from "./pages/LaunchFacewash";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Help from "./pages/Help";
+import Cart from "./pages/Cart";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/help" element={<Help />} />
+          <Route path="/cart" element={<Cart />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

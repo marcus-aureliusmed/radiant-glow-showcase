@@ -11,7 +11,7 @@ interface ProductsGridProps {
 
 export function ProductsGrid({ products, openProductDetails }: ProductsGridProps) {
   const [animateCards, setAnimateCards] = useState(false);
-  const [favorites, setFavorites] = useState<string[]>([]);
+  const [favorites, setFavorites] = useState<Record<string, boolean>>({});
   
   useEffect(() => {
     // Trigger animation after component mounts
@@ -20,11 +20,10 @@ export function ProductsGrid({ products, openProductDetails }: ProductsGridProps
 
   const toggleFavorite = (e: React.MouseEvent, productId: string) => {
     e.stopPropagation();
-    setFavorites(prev => 
-      prev.includes(productId) 
-        ? prev.filter(id => id !== productId) 
-        : [...prev, productId]
-    );
+    setFavorites(prev => ({
+      ...prev,
+      [productId]: !prev[productId]
+    }));
   };
 
   return (
@@ -74,7 +73,7 @@ export function ProductsGrid({ products, openProductDetails }: ProductsGridProps
                 >
                   <Heart 
                     size={18} 
-                    className={favorites.includes(product.id.toString()) ? "fill-pink-500 text-pink-500" : "text-gray-500"}
+                    className={favorites[product.id.toString()] ? "fill-pink-500 text-pink-500" : "text-gray-500"}
                   />
                 </button>
                 
