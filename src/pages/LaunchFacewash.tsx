@@ -8,6 +8,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const steps = [
   { id: 1, title: "Basic Information" },
@@ -446,47 +447,57 @@ export default function LaunchFacewash() {
           <div className="mt-12 bg-white p-6 rounded-xl shadow-sm">
             <h2 className="text-xl font-semibold mb-4">Frequently Asked Questions</h2>
             
-            <div className="space-y-4">
-              <div className="border-b pb-3">
-                <h3 className="font-medium mb-1">How long does the product launch process take?</h3>
-                <p className="text-sm text-muted-foreground">
+            <Accordion type="single" collapsible className="w-full">
+              <AccordionItem value="item-1" className="border-b">
+                <AccordionTrigger className="py-4 text-left font-medium">
+                  How long does the product launch process take?
+                </AccordionTrigger>
+                <AccordionContent className="pb-4 text-sm text-muted-foreground">
                   Typically, it takes 4-6 weeks from submission to market launch, including formula finalization, 
                   packaging design, and production setup.
-                </p>
-              </div>
+                </AccordionContent>
+              </AccordionItem>
               
-              <div className="border-b pb-3">
-                <h3 className="font-medium mb-1">What support do you provide for new product launches?</h3>
-                <p className="text-sm text-muted-foreground">
+              <AccordionItem value="item-2" className="border-b">
+                <AccordionTrigger className="py-4 text-left font-medium">
+                  What support do you provide for new product launches?
+                </AccordionTrigger>
+                <AccordionContent className="pb-4 text-sm text-muted-foreground">
                   We offer comprehensive support including formulation guidance, packaging design assistance, 
                   regulatory compliance help, and marketing strategy consultation.
-                </p>
-              </div>
+                </AccordionContent>
+              </AccordionItem>
               
-              <div className="border-b pb-3">
-                <h3 className="font-medium mb-1">Do I need to have my own manufacturing facility?</h3>
-                <p className="text-sm text-muted-foreground">
+              <AccordionItem value="item-3" className="border-b">
+                <AccordionTrigger className="py-4 text-left font-medium">
+                  Do I need to have my own manufacturing facility?
+                </AccordionTrigger>
+                <AccordionContent className="pb-4 text-sm text-muted-foreground">
                   No, we partner with certified manufacturing facilities that can produce your facewash according 
                   to your specifications and our quality standards.
-                </p>
-              </div>
+                </AccordionContent>
+              </AccordionItem>
               
-              <div className="border-b pb-3">
-                <h3 className="font-medium mb-1">Can I modify my formula after submission?</h3>
-                <p className="text-sm text-muted-foreground">
+              <AccordionItem value="item-4" className="border-b">
+                <AccordionTrigger className="py-4 text-left font-medium">
+                  Can I modify my formula after submission?
+                </AccordionTrigger>
+                <AccordionContent className="pb-4 text-sm text-muted-foreground">
                   Yes, but changes after the initial review may extend the timeline. Minor adjustments can be made 
                   during the formulation stage with minimal delay.
-                </p>
-              </div>
+                </AccordionContent>
+              </AccordionItem>
               
-              <div>
-                <h3 className="font-medium mb-1">What are the minimum order quantities?</h3>
-                <p className="text-sm text-muted-foreground">
+              <AccordionItem value="item-5">
+                <AccordionTrigger className="py-4 text-left font-medium">
+                  What are the minimum order quantities?
+                </AccordionTrigger>
+                <AccordionContent className="pb-4 text-sm text-muted-foreground">
                   Minimum order quantities typically start at 500 units for initial production runs, with reduced 
                   minimums for subsequent orders based on your sales performance.
-                </p>
-              </div>
-            </div>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </div>
         </div>
       </main>

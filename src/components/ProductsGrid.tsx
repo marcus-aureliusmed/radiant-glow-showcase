@@ -12,11 +12,22 @@ interface ProductsGridProps {
 export function ProductsGrid({ products, openProductDetails }: ProductsGridProps) {
   const [animateCards, setAnimateCards] = useState(false);
   const [favorites, setFavorites] = useState<Record<string, boolean>>({});
+  const [shippingDays, setShippingDays] = useState<Record<string, {min: number, max: number}>>({});
   
   useEffect(() => {
     // Trigger animation after component mounts
     setAnimateCards(true);
-  }, []);
+    
+    // Generate and store fixed shipping days for each product
+    const initialShippingDays: Record<string, {min: number, max: number}> = {};
+    products.forEach(product => {
+      initialShippingDays[product.id.toString()] = {
+        min: Math.floor(Math.random() * 5) + 1,
+        max: Math.floor(Math.random() * 5) + 5
+      };
+    });
+    setShippingDays(initialShippingDays);
+  }, [products]);
 
   const toggleFavorite = (e: React.MouseEvent, productId: string) => {
     e.stopPropagation();
@@ -108,9 +119,9 @@ export function ProductsGrid({ products, openProductDetails }: ProductsGridProps
                     For {product.skinType.join(", ")} skin
                   </p>
                   
-                  {/* Date range like display */}
+                  {/* Date range like display with consistent shipping days */}
                   <p className="text-sm text-muted-foreground">
-                    Ships in {Math.floor(Math.random() * 5) + 1}-{Math.floor(Math.random() * 5) + 5} days
+                    Ships in {shippingDays[product.id.toString()]?.min || 1}-{shippingDays[product.id.toString()]?.max || 7} days
                   </p>
                   
                   {/* Price display */}
