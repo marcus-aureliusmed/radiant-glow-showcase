@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
 import { ArrowUp, Mail, Phone, MessageSquare } from "lucide-react";
@@ -12,8 +13,7 @@ export function Footer() {
   
   return (
     <footer className="bg-background border-t">
-      {/* Main Footer */}
-      <div className="container mx-auto pt-12 pb-6 px-4">
+      <div className="container mx-auto pt-12 pb-6 px-4 grid md:grid-cols-3 gap-8">
         {/* Company Info */}
         <div>
           <Link to="/" className="text-2xl font-semibold inline-block mb-4">
@@ -107,3 +107,4 @@ export function Footer() {
     </footer>
   );
 }
+
