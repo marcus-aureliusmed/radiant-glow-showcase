@@ -72,7 +72,7 @@ export function Footer() {
               </div>
               <div>
                 <p className="text-sm text-muted-foreground">Call us at</p>
-                <p className="font-medium">+91 9876543210</p>
+                <p className="font-medium">+91 998384XXXX</p>
               </div>
             </div>
             <div className="flex items-center gap-3">
