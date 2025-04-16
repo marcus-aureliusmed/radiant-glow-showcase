@@ -1,4 +1,3 @@
-
 import { Product, SkinType, Brand, Ingredient } from '@/types/product';
 
 export const products: Product[] = [
@@ -72,7 +71,7 @@ export const products: Product[] = [
     ],
     popularity: 92,
     isNewArrival: false,
-    image: "https://sdmntprnorthcentralus.oaiusercontent.com/files/00000000-7c64-622f-82a7-ac7d309654d8/raw?se=2025-04-15T11%3A10%3A04Z&sp=r&sv=2024-08-04&sr=b&scid=1010a90f-a417-5e9d-aa63-e74282923c2a&skoid=a3336399-497e-45e5-8f28-4b88ecca3d1f&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-04-14T20%3A18%3A53Z&ske=2025-04-15T20%3A18%3A53Z&sks=b&skv=2024-08-04&sig=IGiapZ%2BrvUTUWwvx1mumYHN0I1axLYJbqwH/vA/k/pc%3D"
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoOE2xcQjVd_By4pQ0etu4oEuR-GHOSoRE-w&s"
   },
   {
     id: 5,
@@ -162,7 +161,7 @@ export const products: Product[] = [
     ],
     popularity: 88,
     isNewArrival: true,
-    image: "https://images.unsplash.com/photo-1739285094922-e3c6cf72d470?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    image: "https://images.unsplash.com/photo-1739285094922-e3c6cf72d470?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nzh8fGZhY2V3YXNofGVufDB8fDB8fHww"
   },
   {
     id: 10,
