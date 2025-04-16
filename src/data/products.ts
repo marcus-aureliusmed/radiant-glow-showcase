@@ -1,3 +1,4 @@
+
 import { Product, SkinType, Brand, Ingredient } from '@/types/product';
 
 export const products: Product[] = [
@@ -17,7 +18,7 @@ export const products: Product[] = [
     ],
     popularity: 93,
     isNewArrival: false,
-    image: "https://images.unsplash.com/photo-1556228720-195a672e8a03?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    image: "https://images.unsplash.com/photo-1731577178007-d48d92fd30fc?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     id: 2,
@@ -35,7 +36,7 @@ export const products: Product[] = [
     ],
     popularity: 87,
     isNewArrival: false,
-    image: "https://images.unsplash.com/photo-1631730486572-5698cacc829c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    image: "https://images.unsplash.com/photo-1653919198052-546d44e2458e?q=80&w=2028&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     id: 3,
@@ -53,7 +54,7 @@ export const products: Product[] = [
     ],
     popularity: 78,
     isNewArrival: true,
-    image: "https://images.pexels.com/photos/17466173/pexels-photo-17466173/free-photo-of-transformative-makeup-for-the-bold-and-beautiful.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    image: "https://images.unsplash.com/photo-1666028095907-15814bd435cd?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZmFjZXdhc2h8ZW58MHx8MHx8fDA%3D"
   },
   {
     id: 4,
@@ -71,7 +72,7 @@ export const products: Product[] = [
     ],
     popularity: 92,
     isNewArrival: false,
-    image: "https://images.pexels.com/photos/17466036/pexels-photo-17466036/free-photo-of-transformative-makeup-for-the-bold-and-beautiful.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    image: "https://sdmntprnorthcentralus.oaiusercontent.com/files/00000000-7c64-622f-82a7-ac7d309654d8/raw?se=2025-04-15T11%3A10%3A04Z&sp=r&sv=2024-08-04&sr=b&scid=1010a90f-a417-5e9d-aa63-e74282923c2a&skoid=a3336399-497e-45e5-8f28-4b88ecca3d1f&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-04-14T20%3A18%3A53Z&ske=2025-04-15T20%3A18%3A53Z&sks=b&skv=2024-08-04&sig=IGiapZ%2BrvUTUWwvx1mumYHN0I1axLYJbqwH/vA/k/pc%3D"
   },
   {
     id: 5,
@@ -89,7 +90,7 @@ export const products: Product[] = [
     ],
     popularity: 89,
     isNewArrival: true,
-    image: "https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    image: "https://images.pexels.com/photos/17466173/pexels-photo-17466173/free-photo-of-transformative-makeup-for-the-bold-and-beautiful.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
   },
   {
     id: 6,
@@ -107,7 +108,7 @@ export const products: Product[] = [
     ],
     popularity: 75,
     isNewArrival: false,
-    image: "https://images.unsplash.com/photo-1556229010-aa3f7ff66b24?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8ZmFjZXdhc2h8ZW58MHx8MHx8fDA%3D"
+    image: "https://images.pexels.com/photos/17466036/pexels-photo-17466036/free-photo-of-transformative-makeup-for-the-bold-and-beautiful.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
   },
   {
     id: 7,
@@ -125,7 +126,7 @@ export const products: Product[] = [
     ],
     popularity: 85,
     isNewArrival: true,
-    image: "https://images.unsplash.com/photo-1739285094922-e3c6cf72d470?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    image: "https://images.pexels.com/photos/17466121/pexels-photo-17466121/free-photo-of-transformative-makeup-for-the-bold-and-beautiful.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
   },
   {
     id: 8,
@@ -143,7 +144,7 @@ export const products: Product[] = [
     ],
     popularity: 82,
     isNewArrival: false,
-    image: "https://images.unsplash.com/photo-1739175516086-1135a8020f16?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzh8fGZhY2V3YXNofGVufDB8fDB8fHww"
+    image: "https://images.unsplash.com/photo-1556229010-aa3f7ff66b24?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8ZmFjZXdhc2h8ZW58MHx8MHx8fDA%3D"
   },
   {
     id: 9,
@@ -161,7 +162,7 @@ export const products: Product[] = [
     ],
     popularity: 88,
     isNewArrival: true,
-    image: "https://images.unsplash.com/photo-1598462795010-8ffd5f41d1aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    image: "https://images.unsplash.com/photo-1739285094922-e3c6cf72d470?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     id: 10,
@@ -179,7 +180,7 @@ export const products: Product[] = [
     ],
     popularity: 79,
     isNewArrival: false,
-    image: "https://images.unsplash.com/photo-1631730486920-c7fb632b4221?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    image: "https://images.unsplash.com/photo-1739175516086-1135a8020f16?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzh8fGZhY2V3YXNofGVufDB8fDB8fHww"
   },
   {
     id: 11,
@@ -197,7 +198,7 @@ export const products: Product[] = [
     ],
     popularity: 84,
     isNewArrival: false,
-    image: "https://images.unsplash.com/photo-1612532275214-e4ca76d0e4d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    image: "https://images.unsplash.com/photo-1731577178044-93840a6d14b5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fGZhY2V3YXNofGVufDB8fDB8fHww"
   },
   {
     id: 12,
@@ -215,7 +216,7 @@ export const products: Product[] = [
     ],
     popularity: 77,
     isNewArrival: false,
-    image: "https://images.unsplash.com/photo-1611080626919-7cf5a9dbab12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    image: "https://images.unsplash.com/photo-1739131285874-8d545cffef95?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzB8fGZhY2V3YXNofGVufDB8fDB8fHww"
   }
 ];
 
